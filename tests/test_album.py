@@ -10,5 +10,14 @@ def test_album_constructs():
 
 
 '''Construct with equality'''
-
+def test_albums_are_equal():
+    album1 = Album(1, 'Test Title', 1968, 3)
+    album2 = Album(1, 'Test Title', 1968, 3)
+    
+    assert album1 == album2
+    
+    
 '''Constructs so it looks pretty'''
+def test_albums_format_nicely():
+    album = Album(1, 'Test Title', 1968, 3)
+    assert str(album) == "Album(1, Test Title, 1968, 3)"
